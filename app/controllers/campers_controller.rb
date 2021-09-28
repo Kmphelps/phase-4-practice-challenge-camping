@@ -10,7 +10,8 @@ rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_resp
 
     def show
         camper = find_camper
-        render json: camper, serializer: CamperWithActivitiesSerializer
+        render json: camper 
+        #serializer: CamperWithActivitiesSerializer
     end
 
     def create
